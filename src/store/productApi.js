@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/dist/query/react";
 const productApi = createApi({
   reducerPath: "productApi", //Api的名稱，不能重複
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:5000/",
+    baseUrl: "https://nrnrut.deta.dev/",
   }), //發送請求使用的工具
   endpoints(build) {
     // endpoints 用來指定Api中的功能，是一個函式，需要一個物件作為return
