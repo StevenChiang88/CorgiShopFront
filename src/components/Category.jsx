@@ -10,7 +10,7 @@ const Category = ({ data }) => {
         <h1 className="font-bold mb-4 ">{data.cat}</h1>
         <button
           onClick={() => {
-            navigate(data.link);
+            navigate("/products");
           }}
           className="px-4 py-2 bg-slate-600"
         >

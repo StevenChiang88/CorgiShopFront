@@ -1,0 +1,17 @@
+[33mcommit bc8a85d48d8357742e2b26d89d0d4d1080995462[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Steven Chiang <stevenjtc1015@gmail.com>
+Date:   Tue Dec 13 14:48:04 2022 +0800
+
+    change Fetch BaserUrl to DetaServerURL
+
+[33mcommit 6a2975b79dfb0f6abd509f38081dabde3e070c7f[m
+Author: Steven Chiang <stevenjtc1015@gmail.com>
+Date:   Fri Dec 9 17:56:21 2022 +0800
+
+    first commit
+
+[33mcommit 6ce50649b514fa43a89ddea55ed81fb49986eadc[m
+Author: Steven Chiang <stevenjtc1015@gmail.com>
+Date:   Tue Nov 15 13:46:20 2022 +0800
+
+    Initialize project using Create React App

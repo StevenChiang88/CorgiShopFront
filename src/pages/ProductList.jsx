@@ -7,10 +7,10 @@ import { useGetProductsQuery } from "../store/productApi";
 import { useState } from "react";
 import { useEffect } from "react";
 import CouponBanner from "../components/CouponBanner";
+import Pagination from "../components/Pagination";
 const ProductList = () => {
   const { data, isSuccess } = useGetProductsQuery();
   const [filteredData, setFilteredData] = useState();
-
   useEffect(() => {
     setFilteredData(data);
   }, [data]);
@@ -32,6 +32,23 @@ const ProductList = () => {
     });
     setFilteredData(X);
   };
+
+  // pagination
+  const [currentPage, setCurrentPage] = useState(1);
+  const [productsPerPage, setProductsPerPage] = useState(8);
+  const lastProductIndex = currentPage * productsPerPage;
+  const firstProductIndex = lastProductIndex - productsPerPage;
+
+  const [currentProduct, setCurrentProduct] = useState();
+  const paginationHandler = () => {
+    const x = filteredData.slice(firstProductIndex, lastProductIndex);
+    setCurrentProduct(x);
+  };
+
+  useEffect(() => {
+    filteredData && paginationHandler();
+  }, [filteredData, firstProductIndex, lastProductIndex]);
+  // pagination
   return (
     <div className="flex items-center justify-center flex-col w-full min-h-[calc(100vh_-_11rem) ">
       <CouponBanner />
@@ -98,8 +115,19 @@ const ProductList = () => {
           </div>
         </div>
       </div>
-      <div className="w-4/5">
-        {filteredData ? <Products data={filteredData} /> : <p>數據加載中</p>}
+      <div className="flex flex-col items-center w-5/5 2xl:w-3/5">
+        {currentProduct ? (
+          <>
+            <Products data={currentProduct} />
+            <Pagination
+              totalPosts={filteredData.length}
+              productsPerPage={productsPerPage}
+              setCurrentPage={setCurrentPage}
+            />
+          </>
+        ) : (
+          <p>數據加載中</p>
+        )}
       </div>
     </div>
   );

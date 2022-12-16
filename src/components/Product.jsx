@@ -33,7 +33,7 @@ const Product = ({ item }) => {
         position: "relative",
         width: "230px",
         color: "white",
-        height: "300px",
+        height: "270px",
         margin: "2rem 1rem",
       }}
     >
