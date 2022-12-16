@@ -33,7 +33,7 @@ const HeroBanner = () => {
           slideIndex === index && (
             <img
               key={index}
-              className="w-screen h-full object-cover object-mid bg-cover"
+              className="w-screen h-full object-cover object-mid "
               src={require(`../assets/${item.link}`)}
               alt={item.title}
             />
