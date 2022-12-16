@@ -16,7 +16,7 @@ const App = () => {
     <div>
       <Navbar />
       <Routes>
-        <Route path="/corgishopfront" element={<HomePage />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
         <Route path="checkout" element={<CheckoutPage />} />

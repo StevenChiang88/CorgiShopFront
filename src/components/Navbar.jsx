@@ -14,7 +14,7 @@ const Navbar = () => {
   const auth = useSelector((state) => state.auth);
   let orderLink = "order/" + auth.userId;
   let Links = [
-    { name: "首頁", link: "/corgishopfront" },
+    { name: "首頁", link: "/" },
     { name: "所有商品", link: "/products" },
     { name: "訂單查詢", link: orderLink },
     { name: "購物清單", link: "/checkout" },
@@ -25,7 +25,7 @@ const Navbar = () => {
   return (
     <div className="shadow-md z-50 h-[5rem] w-full sticky top-0 left-0 py-4 px-8 bg-slate-500 flex justify-between  items-center  ">
       <div>
-        <NavLink to="/corgishopfront">
+        <NavLink to="/">
           <span className="font-bold  text-2xl">Corgi Shop.</span>
         </NavLink>
       </div>
